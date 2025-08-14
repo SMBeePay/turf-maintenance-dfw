@@ -1,0 +1,410 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Service Locations - Dallas Fort-Worth Coverage | TurfPro DFW">
+  <Header />
+  
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Service Locations</h1>
+        <p>Serving artificial turf sports fields throughout the Dallas Fort-Worth Metroplex</p>
+      </div>
+    </section>
+
+    <!-- Coverage Map -->
+    <section class="coverage-area">
+      <div class="container">
+        <h2>Our Service Area</h2>
+        <p class="area-description">
+          We proudly serve sports facilities, schools, and recreational centers throughout the Dallas Fort-Worth Metroplex. 
+          Our team is equipped to handle projects of any size, from small training fields to large stadium installations.
+        </p>
+        
+        <div class="locations-grid">
+          <div class="location-group">
+            <h3>Dallas County</h3>
+            <ul>
+              <li>Dallas</li>
+              <li>Plano</li>
+              <li>Richardson</li>
+              <li>Garland</li>
+              <li>Irving</li>
+              <li>Mesquite</li>
+              <li>Carrollton</li>
+              <li>Farmers Branch</li>
+              <li>Addison</li>
+              <li>University Park</li>
+              <li>Highland Park</li>
+              <li>DeSoto</li>
+            </ul>
+          </div>
+          
+          <div class="location-group">
+            <h3>Tarrant County</h3>
+            <ul>
+              <li>Fort Worth</li>
+              <li>Arlington</li>
+              <li>Grand Prairie</li>
+              <li>Mansfield</li>
+              <li>Euless</li>
+              <li>Bedford</li>
+              <li>Hurst</li>
+              <li>Grapevine</li>
+              <li>Keller</li>
+              <li>Southlake</li>
+              <li>Colleyville</li>
+              <li>North Richland Hills</li>
+            </ul>
+          </div>
+          
+          <div class="location-group">
+            <h3>Collin County</h3>
+            <ul>
+              <li>McKinney</li>
+              <li>Frisco</li>
+              <li>Allen</li>
+              <li>Wylie</li>
+              <li>Murphy</li>
+              <li>Prosper</li>
+              <li>The Colony</li>
+              <li>Lewisville</li>
+              <li>Flower Mound</li>
+              <li>Coppell</li>
+            </ul>
+          </div>
+          
+          <div class="location-group">
+            <h3>Denton County</h3>
+            <ul>
+              <li>Denton</li>
+              <li>Lewisville</li>
+              <li>Flower Mound</li>
+              <li>Coppell</li>
+              <li>Carrollton</li>
+              <li>The Colony</li>
+              <li>Little Elm</li>
+              <li>Highland Village</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facility Types -->
+    <section class="facility-types">
+      <div class="container">
+        <h2>Facilities We Service</h2>
+        <div class="facilities-grid">
+          <div class="facility-card">
+            <h3>Schools & Universities</h3>
+            <p>Public and private schools, colleges, and universities with artificial turf sports fields.</p>
+            <ul>
+              <li>Football fields</li>
+              <li>Soccer fields</li>
+              <li>Baseball/softball fields</li>
+              <li>Multi-purpose fields</li>
+            </ul>
+          </div>
+          
+          <div class="facility-card">
+            <h3>Sports Complexes</h3>
+            <p>Municipal and private sports complexes serving the community.</p>
+            <ul>
+              <li>Recreation centers</li>
+              <li>Youth sports leagues</li>
+              <li>Tournament facilities</li>
+              <li>Training centers</li>
+            </ul>
+          </div>
+          
+          <div class="facility-card">
+            <h3>Professional Venues</h3>
+            <p>Professional and semi-professional sports facilities.</p>
+            <ul>
+              <li>Stadiums</li>
+              <li>Practice facilities</li>
+              <li>Indoor training centers</li>
+              <li>Event venues</li>
+            </ul>
+          </div>
+          
+          <div class="facility-card">
+            <h3>Private Facilities</h3>
+            <p>Private sports facilities and exclusive training centers.</p>
+            <ul>
+              <li>Country clubs</li>
+              <li>Private schools</li>
+              <li>Corporate facilities</li>
+              <li>Residential fields</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Radius -->
+    <section class="service-radius">
+      <div class="container">
+        <h2>Service Radius & Response Times</h2>
+        <div class="radius-info">
+          <div class="radius-card">
+            <h3>Primary Service Area</h3>
+            <p><strong>Within 25 miles of Dallas/Fort Worth</strong></p>
+            <ul>
+              <li>Same-day service available</li>
+              <li>Emergency response within 2 hours</li>
+              <li>Regular maintenance programs</li>
+            </ul>
+          </div>
+          
+          <div class="radius-card">
+            <h3>Extended Service Area</h3>
+            <p><strong>25-50 miles from DFW</strong></p>
+            <ul>
+              <li>Next-day service available</li>
+              <li>Emergency response within 4 hours</li>
+              <li>Scheduled maintenance programs</li>
+            </ul>
+          </div>
+          
+          <div class="radius-card">
+            <h3>Special Projects</h3>
+            <p><strong>Beyond 50 miles</strong></p>
+            <ul>
+              <li>Available for large projects</li>
+              <li>Custom scheduling</li>
+              <li>Travel fees may apply</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>Not Sure If We Service Your Area?</h2>
+        <p>Contact us to discuss your location and specific needs. We're always expanding our service area.</p>
+        <a href="/contact" class="btn">Check Service Availability</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-header p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+
+  .coverage-area {
+    padding: 5rem 0;
+  }
+
+  .coverage-area h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .area-description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: #4b5563;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .location-group {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+
+  .location-group h3 {
+    color: #22c55e;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .location-group ul {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-gap: 1rem;
+  }
+
+  .location-group li {
+    padding: 0.25rem 0;
+    color: #374151;
+  }
+
+  .facility-types {
+    padding: 5rem 0;
+    background-color: #f9fafb;
+  }
+
+  .facility-types h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1f2937;
+  }
+
+  .facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .facility-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .facility-card h3 {
+    color: #22c55e;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .facility-card p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+
+  .facility-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .facility-card li {
+    padding: 0.25rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #374151;
+  }
+
+  .facility-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #22c55e;
+  }
+
+  .service-radius {
+    padding: 5rem 0;
+  }
+
+  .service-radius h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1f2937;
+  }
+
+  .radius-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .radius-card {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+
+  .radius-card h3 {
+    color: #22c55e;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .radius-card p {
+    color: #1f2937;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .radius-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+
+  .radius-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #374151;
+  }
+
+  .radius-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #22c55e;
+    font-weight: bold;
+  }
+
+  .cta {
+    background-color: #1f2937;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .location-group ul {
+      columns: 1;
+    }
+  }
+</style>

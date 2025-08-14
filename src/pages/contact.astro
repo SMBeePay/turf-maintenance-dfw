@@ -1,0 +1,426 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact Us - Get Your Free Quote | TurfPro DFW">
+  <Header />
+  
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get your free quote for professional artificial turf maintenance services</p>
+      </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <h2>Get Your Free Quote</h2>
+            <form id="contact-form" method="POST" action="#" class="form">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="organization">Organization/School</label>
+                <input type="text" id="organization" name="organization">
+              </div>
+              
+              <div class="form-group">
+                <label for="field-type">Field Type *</label>
+                <select id="field-type" name="field-type" required>
+                  <option value="">Select Field Type</option>
+                  <option value="football">Football Field</option>
+                  <option value="soccer">Soccer Field</option>
+                  <option value="baseball">Baseball/Softball Field</option>
+                  <option value="multi-purpose">Multi-Purpose Field</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="field-size">Field Size (sq ft)</label>
+                <input type="text" id="field-size" name="field-size" placeholder="e.g., 80,000">
+              </div>
+              
+              <div class="form-group">
+                <label for="service-needed">Service Needed *</label>
+                <select id="service-needed" name="service-needed" required>
+                  <option value="">Select Service</option>
+                  <option value="deep-cleaning">Deep Cleaning</option>
+                  <option value="sanitization">Sanitization</option>
+                  <option value="infill-redistribution">Infill Redistribution</option>
+                  <option value="repairs">Repairs & Maintenance</option>
+                  <option value="emergency">Emergency Service</option>
+                  <option value="maintenance-program">Maintenance Program</option>
+                  <option value="multiple">Multiple Services</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="urgency">Service Urgency</label>
+                <select id="urgency" name="urgency">
+                  <option value="">Select Timeline</option>
+                  <option value="emergency">Emergency (Same Day)</option>
+                  <option value="urgent">Urgent (Within 3 Days)</option>
+                  <option value="soon">Soon (Within 2 Weeks)</option>
+                  <option value="flexible">Flexible (Within Month)</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="location">Location/City *</label>
+                <input type="text" id="location" name="location" placeholder="e.g., Dallas, Plano, Fort Worth" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Additional Details</label>
+                <textarea id="message" name="message" rows="4" placeholder="Please describe any specific concerns, field conditions, or special requirements..."></textarea>
+              </div>
+              
+              <button type="submit" class="btn">Get Free Quote</button>
+            </form>
+          </div>
+          
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h2>Contact Information</h2>
+            
+            <div class="info-item">
+              <h3>📞 Phone</h3>
+              <p><strong>(214) 555-TURF</strong></p>
+              <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
+              <p>Saturday: 8:00 AM - 5:00 PM</p>
+              <p>Sunday: Emergency calls only</p>
+            </div>
+            
+            <div class="info-item">
+              <h3>✉️ Email</h3>
+              <p><a href="mailto:info@turfprodfw.com">info@turfprodfw.com</a></p>
+              <p>For quotes and general inquiries</p>
+            </div>
+            
+            <div class="info-item">
+              <h3>🚨 Emergency Service</h3>
+              <p><strong>(214) 555-911</strong></p>
+              <p>24/7 emergency response line</p>
+              <p>Storm damage, vandalism, urgent repairs</p>
+            </div>
+            
+            <div class="info-item">
+              <h3>📍 Service Area</h3>
+              <p>Dallas Fort-Worth Metroplex</p>
+              <p>Including all of Dallas, Tarrant, Collin, and Denton counties</p>
+            </div>
+            
+            <div class="info-item">
+              <h3>⚡ Response Times</h3>
+              <ul>
+                <li>Emergency: Within 2 hours</li>
+                <li>Urgent requests: Same or next day</li>
+                <li>Standard service: 2-5 business days</li>
+                <li>Quotes: Within 24 hours</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Contact Us -->
+    <section class="why-contact">
+      <div class="container">
+        <h2>Why Choose TurfPro DFW?</h2>
+        <div class="benefits-grid">
+          <div class="benefit">
+            <h3>Free Consultation</h3>
+            <p>No-obligation field assessment and detailed quote at no charge.</p>
+          </div>
+          <div class="benefit">
+            <h3>Local Experts</h3>
+            <p>Dallas Fort-Worth based team with extensive local experience.</p>
+          </div>
+          <div class="benefit">
+            <h3>Quick Response</h3>
+            <p>Fast turnaround on quotes and emergency service availability.</p>
+          </div>
+          <div class="benefit">
+            <h3>Guaranteed Work</h3>
+            <p>100% satisfaction guarantee on all our services.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+      <div class="container">
+        <h2>We Serve These Areas</h2>
+        <div class="areas-grid">
+          <div class="area-column">
+            <h4>Dallas County</h4>
+            <p>Dallas, Plano, Richardson, Irving, Garland, Mesquite, Carrollton, Farmers Branch, Addison</p>
+          </div>
+          <div class="area-column">
+            <h4>Tarrant County</h4>
+            <p>Fort Worth, Arlington, Grand Prairie, Mansfield, Euless, Bedford, Hurst, Grapevine, Keller</p>
+          </div>
+          <div class="area-column">
+            <h4>Collin County</h4>
+            <p>McKinney, Frisco, Allen, Wylie, Murphy, Prosper, The Colony, Lewisville</p>
+          </div>
+          <div class="area-column">
+            <h4>Denton County</h4>
+            <p>Denton, Flower Mound, Coppell, Little Elm, Highland Village</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-header p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+
+  .contact-section {
+    padding: 5rem 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+
+  .contact-form h2,
+  .contact-info h2 {
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    max-width: 600px;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    font-weight: 600;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .contact-info .info-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+  }
+
+  .contact-info h3 {
+    color: #22c55e;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info p {
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info a {
+    color: #22c55e;
+    text-decoration: none;
+  }
+
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .contact-info li {
+    color: #4b5563;
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .contact-info li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #22c55e;
+  }
+
+  .why-contact {
+    padding: 5rem 0;
+    background-color: #f9fafb;
+  }
+
+  .why-contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1f2937;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .benefit {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .benefit h3 {
+    color: #22c55e;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .benefit p {
+    color: #4b5563;
+  }
+
+  .service-areas {
+    padding: 5rem 0;
+  }
+
+  .service-areas h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1f2937;
+  }
+
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .area-column {
+    text-align: center;
+    padding: 2rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+  }
+
+  .area-column h4 {
+    color: #22c55e;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .area-column p {
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .form {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<script>
+  document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    
+    // In a real application, you would send this data to your backend
+    console.log('Form submission:', data);
+    
+    // Show success message
+    alert('Thank you for your inquiry! We will contact you within 24 hours with your free quote.');
+    
+    // Reset form
+    this.reset();
+  });
+</script>

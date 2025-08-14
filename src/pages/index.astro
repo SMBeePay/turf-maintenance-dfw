@@ -1,16 +1,205 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="TurfPro DFW - Professional Artificial Turf Maintenance | Dallas Fort-Worth">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Professional Artificial Turf Maintenance</h1>
+          <p class="hero-subtitle">Keeping your sports fields safe, clean, and game-ready in Dallas Fort-Worth</p>
+          <div class="hero-buttons">
+            <a href="/contact" class="btn">Get Free Quote</a>
+            <a href="/services" class="btn btn-secondary">Our Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Deep Cleaning</h3>
+            <p>Comprehensive cleaning to remove dirt, debris, and contaminants from your artificial turf surface.</p>
+          </div>
+          <div class="service-card">
+            <h3>Sanitization</h3>
+            <p>Professional sanitization to eliminate bacteria, viruses, and odors for a healthier playing environment.</p>
+          </div>
+          <div class="service-card">
+            <h3>Infill Redistribution</h3>
+            <p>Proper redistribution and leveling of infill materials to maintain optimal playing conditions.</p>
+          </div>
+          <div class="service-card">
+            <h3>Repairs & Maintenance</h3>
+            <p>Expert repair services and ongoing maintenance to extend the life of your artificial turf investment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+      <div class="container">
+        <h2>Why Choose TurfPro DFW?</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <h3>Local Experts</h3>
+            <p>Dallas Fort-Worth based team with deep knowledge of local field conditions and requirements.</p>
+          </div>
+          <div class="feature">
+            <h3>Professional Equipment</h3>
+            <p>State-of-the-art cleaning and maintenance equipment designed specifically for artificial turf.</p>
+          </div>
+          <div class="feature">
+            <h3>Certified Technicians</h3>
+            <p>Trained and certified professionals who understand the intricacies of synthetic sports surfaces.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Maintain Your Field?</h2>
+          <p>Contact us today for a free consultation and quote for your artificial turf maintenance needs.</p>
+          <a href="/contact" class="btn">Schedule Service</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .services-overview {
+    padding: 5rem 0;
+    background-color: #f9fafb;
+  }
+
+  .services-overview h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1f2937;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .service-card h3 {
+    color: #22c55e;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .why-choose-us {
+    padding: 5rem 0;
+  }
+
+  .why-choose-us h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1f2937;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+  }
+
+  .feature {
+    text-align: center;
+  }
+
+  .feature h3 {
+    color: #22c55e;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta {
+    background-color: #1f2937;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .services-overview h2,
+    .why-choose-us h2,
+    .cta h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
