@@ -1,29 +1,30 @@
-# Astro Starter Kit: Minimal
+# Texas Turf Maintenance - Professional Artificial Turf Care
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A modern website built with Astro for Texas Turf Maintenance, providing professional artificial turf maintenance services in the Dallas Fort-Worth area.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Features
 
-## 🚀 Project Structure
+- **Professional Contact Form** with email notifications
+- **Responsive Design** optimized for all devices
+- **Vercel Serverless Functions** for form handling
+- **Email Integration** via Resend service
+- **Backup Form Storage** for reliability
+- **Service Area Coverage** across DFW Metroplex
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Project Structure
 
 ```text
 /
-├── public/
+├── api/                    # Vercel serverless functions
+│   ├── contact.js         # Form submission handler
+│   └── submissions.js     # Backup storage system
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/        # Reusable components
+│   ├── layouts/          # Page layouts
+│   └── pages/            # Site pages
+├── SETUP.md              # Deployment setup guide
+└── vercel.json           # Vercel configuration
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
