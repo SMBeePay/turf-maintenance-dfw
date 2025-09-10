@@ -4,89 +4,263 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>TurfPro DFW</h3>
-        <p>Professional artificial turf maintenance services for sports fields in the Dallas Fort-Worth area.</p>
+      <div class="footer-section footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">🌱</div>
+          <div>
+            <h3>Texas Turf Maintenance</h3>
+            <p class="footer-tagline">Artificial Sports Field Experts</p>
+          </div>
+        </div>
+        <p class="footer-description">Professional artificial turf maintenance services for sports fields throughout Texas. Trusted by schools, sports complexes, and facilities statewide.</p>
       </div>
+      
       <div class="footer-section">
         <h4>Services</h4>
         <ul>
-          <li>Deep Cleaning</li>
-          <li>Sanitization</li>
-          <li>Infill Redistribution</li>
-          <li>Repairs & Maintenance</li>
+          <li><a href="/services#deep-cleaning">Deep Cleaning</a></li>
+          <li><a href="/services#sanitization">Sanitization</a></li>
+          <li><a href="/services#infill">Infill Management</a></li>
+          <li><a href="/services#repairs">Repairs & Maintenance</a></li>
+          <li><a href="/services#emergency">Emergency Service</a></li>
         </ul>
       </div>
+      
       <div class="footer-section">
-        <h4>Service Area</h4>
+        <h4>Service Areas</h4>
         <ul>
-          <li>Dallas</li>
-          <li>Fort Worth</li>
-          <li>Plano</li>
-          <li>Arlington</li>
+          <li>Dallas & Metroplex</li>
+          <li>Houston & Surrounding</li>
+          <li>Austin & Central Texas</li>
+          <li>San Antonio Region</li>
+          <li>Fort Worth Area</li>
         </ul>
       </div>
+      
       <div class="footer-section">
         <h4>Contact</h4>
-        <p>Email: andrew@texasturfmaintenance.com</p>
+        <div class="contact-info">
+          <p><strong>Email:</strong></p>
+          <p><a href="mailto:andrew@texasturfmaintenance.com">andrew@texasturfmaintenance.com</a></p>
+          <p class="mt-md"><strong>Service Hours:</strong></p>
+          <p class="text-small">Monday - Friday: 7AM - 7PM<br>Saturday: 8AM - 5PM<br>Sunday: Emergency Only</p>
+        </div>
       </div>
     </div>
+    
     <div class="footer-bottom">
-      <p>&copy; 2024 TurfPro DFW. All rights reserved.</p>
+      <div class="footer-bottom-content">
+        <p>&copy; 2024 Texas Turf Maintenance. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
 
 <style>
   .footer {
-    background-color: #1f2937;
-    color: #fff;
-    padding: 3rem 0 1rem;
+    background: var(--color-neutral-900);
+    color: var(--color-neutral-300);
+    padding: var(--space-4xl) 0 var(--space-lg);
   }
 
   .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .footer-brand {
+    max-width: 350px;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .footer-logo-icon {
+    font-size: 2rem;
+    background: var(--color-primary-500);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
   }
 
   .footer-section h3 {
-    color: #22c55e;
+    color: white;
+    font-family: var(--font-primary);
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+    line-height: 1.2;
+  }
+
+  .footer-tagline {
+    color: var(--color-primary-400);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+  }
+
+  .footer-description {
+    color: var(--color-neutral-400);
+    line-height: 1.6;
+    font-size: 0.95rem;
   }
 
   .footer-section h4 {
-    color: #22c55e;
-    margin-bottom: 1rem;
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
   }
 
   .footer-section ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   .footer-section ul li {
-    margin-bottom: 0.5rem;
-    color: #d1d5db;
+    margin-bottom: var(--space-sm);
   }
 
-  .footer-section p {
-    color: #d1d5db;
+  .footer-section ul li a {
+    color: var(--color-neutral-400);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+
+  .footer-section ul li a:hover {
+    color: var(--color-primary-400);
+  }
+
+  .footer-section ul li:not(:has(a)) {
+    color: var(--color-neutral-400);
+    font-size: 0.95rem;
+  }
+
+  .contact-info p {
+    color: var(--color-neutral-400);
     line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .contact-info strong {
+    color: white;
+    font-weight: 600;
+  }
+
+  .contact-info a {
+    color: var(--color-primary-400);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .contact-info a:hover {
+    color: var(--color-primary-300);
+    text-decoration: underline;
   }
 
   .footer-bottom {
-    border-top: 1px solid #374151;
-    padding-top: 1rem;
-    text-align: center;
-    color: #9ca3af;
+    border-top: 1px solid var(--color-neutral-800);
+    padding-top: var(--space-lg);
+  }
+
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .footer-bottom p {
+    color: var(--color-neutral-500);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .footer-links a {
+    color: var(--color-neutral-500);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-neutral-300);
   }
 
   @media (max-width: 768px) {
+    .footer {
+      padding: var(--space-2xl) 0 var(--space-lg);
+    }
+
     .footer-content {
       grid-template-columns: 1fr;
+      gap: var(--space-xl);
       text-align: center;
+    }
+
+    .footer-brand {
+      max-width: none;
+    }
+
+    .footer-logo {
+      justify-content: center;
+    }
+
+    .footer-section {
+      text-align: center;
+    }
+
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-links {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-logo-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+    }
+
+    .footer-section h3 {
+      font-size: 1.25rem;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: var(--space-sm);
     }
   }
 </style>

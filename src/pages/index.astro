@@ -15,71 +15,119 @@ import Footer from '../components/Footer.astro';
   <main>
     <!-- Hero Section -->
     <section class="hero">
+      <div class="hero-bg"></div>
       <div class="container">
         <div class="hero-content">
-          <h1>Dallas Artificial Turf Maintenance</h1>
-          <p class="hero-subtitle">Expert synthetic turf cleaning, sanitization & repair for sports fields throughout Dallas-Fort Worth</p>
-          <div class="hero-buttons">
-            <a href="/contact" class="btn">Get Free Quote</a>
-            <a href="/services" class="btn btn-secondary">Our Services</a>
+          <div class="hero-badge">🏟️ Professional Sports Field Maintenance</div>
+          <h1>Texas Artificial Turf Maintenance</h1>
+          <p class="hero-subtitle text-large">Expert synthetic turf cleaning, sanitization, and repair services for sports fields throughout Texas</p>
+          <div class="hero-buttons flex-center">
+            <a href="/contact" class="btn btn-large">Get Free Quote</a>
+            <a href="/services" class="btn btn-secondary btn-large">View Services</a>
+          </div>
+          <div class="hero-stats grid grid-3">
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Fields Maintained</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Emergency Service</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Services Overview -->
-    <section class="services-overview">
+    <section class="services-overview section bg-neutral-light">
       <div class="container">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Deep Cleaning</h3>
-            <p>Comprehensive cleaning to remove dirt, debris, and contaminants from your artificial turf surface.</p>
+        <div class="section-header text-center mb-2xl">
+          <h2>Professional Turf Maintenance Services</h2>
+          <p class="text-large text-secondary">Comprehensive care for artificial sports fields across Texas</p>
+        </div>
+        <div class="services-grid grid grid-auto">
+          <div class="service-card bg-white shadow-lg rounded-lg">
+            <div class="service-icon">🧹</div>
+            <h3 class="text-primary">Deep Cleaning</h3>
+            <p>Advanced cleaning systems remove embedded dirt, debris, and organic matter to restore your field's appearance and performance.</p>
+            <div class="service-features">
+              <span class="feature-tag">Power Brushing</span>
+              <span class="feature-tag">Debris Extraction</span>
+            </div>
           </div>
-          <div class="service-card">
-            <h3>Sanitization</h3>
-            <p>Professional sanitization to eliminate bacteria, viruses, and odors for a healthier playing environment.</p>
+          <div class="service-card bg-white shadow-lg rounded-lg">
+            <div class="service-icon">🦠</div>
+            <h3 class="text-primary">Sanitization</h3>
+            <p>EPA-approved disinfectants eliminate bacteria, viruses, and odors creating a safer environment for athletes.</p>
+            <div class="service-features">
+              <span class="feature-tag">Anti-microbial</span>
+              <span class="feature-tag">Odor Control</span>
+            </div>
           </div>
-          <div class="service-card">
-            <h3>Infill Redistribution</h3>
-            <p>Proper redistribution and leveling of infill materials to maintain optimal playing conditions.</p>
+          <div class="service-card bg-white shadow-lg rounded-lg">
+            <div class="service-icon">⚖️</div>
+            <h3 class="text-primary">Infill Management</h3>
+            <p>Professional redistribution and leveling of rubber granules ensures consistent playing surface and optimal safety.</p>
+            <div class="service-features">
+              <span class="feature-tag">Level Assessment</span>
+              <span class="feature-tag">Even Distribution</span>
+            </div>
           </div>
-          <div class="service-card">
-            <h3>Repairs & Maintenance</h3>
-            <p>Expert repair services and ongoing maintenance to extend the life of your artificial turf investment.</p>
+          <div class="service-card bg-white shadow-lg rounded-lg">
+            <div class="service-icon">🔧</div>
+            <h3 class="text-primary">Repairs & Maintenance</h3>
+            <p>Expert seam repairs, patch installation, and preventive maintenance programs to maximize your turf's lifespan.</p>
+            <div class="service-features">
+              <span class="feature-tag">Seam Repair</span>
+              <span class="feature-tag">Emergency Service</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Why Choose Us -->
-    <section class="why-choose-us">
+    <section class="why-choose-us section">
       <div class="container">
-        <h2>Why Choose TurfPro DFW?</h2>
-        <div class="features-grid">
-          <div class="feature">
-            <h3>Local Experts</h3>
-            <p>Dallas Fort-Worth based team with deep knowledge of local field conditions and requirements.</p>
+        <div class="section-header text-center mb-2xl">
+          <h2>Why Choose Texas Turf Maintenance?</h2>
+          <p class="text-large text-secondary">Trusted expertise for sports facilities across the Lone Star State</p>
+        </div>
+        <div class="features-grid grid grid-3">
+          <div class="feature text-center">
+            <div class="feature-icon">🎯</div>
+            <h3>Texas Specialists</h3>
+            <p class="text-secondary">Deep understanding of Texas climate challenges and local sports field requirements.</p>
           </div>
-          <div class="feature">
+          <div class="feature text-center">
+            <div class="feature-icon">🔧</div>
             <h3>Professional Equipment</h3>
-            <p>State-of-the-art cleaning and maintenance equipment designed specifically for artificial turf.</p>
+            <p class="text-secondary">State-of-the-art cleaning and maintenance equipment designed for artificial turf care.</p>
           </div>
-          <div class="feature">
+          <div class="feature text-center">
+            <div class="feature-icon">✅</div>
             <h3>Certified Technicians</h3>
-            <p>Trained and certified professionals who understand the intricacies of synthetic sports surfaces.</p>
+            <p class="text-secondary">Trained professionals with industry certifications and extensive synthetic turf experience.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
-      <div class="container">
+    <section class="cta bg-primary text-white">
+      <div class="container text-center">
         <div class="cta-content">
-          <h2>Ready to Maintain Your Field?</h2>
-          <p>Contact us today for a free consultation and quote for your artificial turf maintenance needs.</p>
-          <a href="/contact" class="btn">Schedule Service</a>
+          <h2 class="text-white mb-lg">Ready to Maintain Your Sports Field?</h2>
+          <p class="text-large mb-xl" style="color: rgba(255, 255, 255, 0.9);">Get a free consultation and detailed quote for your artificial turf maintenance needs</p>
+          <div class="cta-buttons flex-center">
+            <a href="/contact" class="btn btn-secondary btn-large">Get Free Quote</a>
+            <a href="tel:andrew@texasturfmaintenance.com" class="btn btn-outline btn-large" style="color: white; border-color: rgba(255, 255, 255, 0.3);">Email Us</a>
+          </div>
         </div>
       </div>
     </section>
@@ -89,122 +137,257 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
+  /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    position: relative;
+    background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-700) 100%);
     color: white;
-    padding: 6rem 0;
+    padding: var(--space-5xl) 0;
     text-align: center;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
   }
 
-  .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: float 20s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.95);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    margin-bottom: var(--space-lg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .hero h1 {
+    color: white;
+    margin-bottom: var(--space-lg);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: var(--space-2xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
+    margin-bottom: var(--space-3xl);
   }
 
-  .services-overview {
-    padding: 5rem 0;
-    background-color: #f9fafb;
+  .hero-stats {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-2xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .services-overview h2 {
+  .stat-item {
     text-align: center;
+  }
+
+  .stat-number {
+    font-family: var(--font-primary);
     font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #1f2937;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+    margin-bottom: var(--space-sm);
   }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+  .stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
+  /* Service Cards */
   .service-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: var(--space-2xl);
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-neutral-200);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--color-primary-500);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary-200);
+  }
+
+  .service-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-lg);
+    display: block;
   }
 
   .service-card h3 {
-    color: #22c55e;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
   }
 
-  .why-choose-us {
-    padding: 5rem 0;
+  .service-card p {
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
   }
 
-  .why-choose-us h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #1f2937;
+  .service-features {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+  .feature-tag {
+    font-size: 0.75rem;
+    background: var(--color-primary-100);
+    color: var(--color-primary-700);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
   }
 
-  .feature {
-    text-align: center;
+  /* Features */
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-lg);
+    display: block;
   }
 
   .feature h3 {
-    color: #22c55e;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
   }
 
+  /* CTA Section */
   .cta {
-    background-color: #1f2937;
-    color: white;
-    padding: 4rem 0;
-    text-align: center;
+    padding: var(--space-4xl) 0;
+    position: relative;
+    overflow: hidden;
   }
 
-  .cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  .cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
   }
 
-  .cta p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+  .cta-content {
+    position: relative;
+    z-index: 1;
   }
 
+  .cta-buttons {
+    gap: var(--space-lg);
+  }
+
+  /* Responsive Design */
   @media (max-width: 768px) {
-    .hero-content h1 {
+    .hero {
+      padding: var(--space-3xl) 0;
+      min-height: 70vh;
+    }
+
+    .stat-number {
       font-size: 2rem;
     }
 
-    .hero-buttons {
+    .service-icon,
+    .feature-icon {
+      font-size: 2.5rem;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
       flex-direction: column;
       align-items: center;
     }
 
-    .services-overview h2,
-    .why-choose-us h2,
-    .cta h2 {
-      font-size: 2rem;
+    .service-features {
+      justify-content: flex-start;
+    }
+
+    .hero-stats {
+      margin-top: var(--space-xl);
     }
   }
+
+  @media (max-width: 480px) {
+    .service-card {
+      padding: var(--space-xl);
+    }
+
+    .stat-number {
+      font-size: 1.75rem;
+    }
+  }
+
+  /* Animation enhancements */
+  .service-card,
+  .feature {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .service-card:nth-child(2) { animation-delay: 0.1s; }
+  .service-card:nth-child(3) { animation-delay: 0.2s; }
+  .service-card:nth-child(4) { animation-delay: 0.3s; }
+
+  .feature:nth-child(2) { animation-delay: 0.1s; }
+  .feature:nth-child(3) { animation-delay: 0.2s; }
 </style>
