@@ -2,9 +2,21 @@
 export interface Props {
   title: string;
   description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogType?: string;
 }
 
-const { title, description = "Professional artificial turf sports field maintenance services in Dallas Fort-Worth. Expert cleaning, sanitizing, and repair for synthetic sports surfaces." } = Astro.props;
+const { 
+  title, 
+  description = "Professional artificial turf maintenance services in Dallas Fort-Worth. Expert cleaning, sanitization, and repair for synthetic sports surfaces. Serving DFW schools and sports facilities.",
+  keywords = "artificial turf maintenance Dallas, synthetic turf cleaning Fort Worth, sports field maintenance DFW, turf repair Texas, artificial grass maintenance, field sanitization",
+  canonical,
+  ogType = "website"
+} = Astro.props;
+
+const siteUrl = "https://texasturfmaintenance.com";
+const currentUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
 ---
 
 <!doctype html>
@@ -12,7 +24,67 @@ const { title, description = "Professional artificial turf sports field maintena
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Texas Turf Maintenance" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={currentUrl} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Texas Turf Maintenance" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={currentUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://texasturfmaintenance.com/#business",
+      "name": "Texas Turf Maintenance",
+      "alternateName": "TurfPro DFW",
+      "description": "Professional artificial turf maintenance services in Dallas Fort-Worth",
+      "url": "https://texasturfmaintenance.com",
+      "telephone": "",
+      "email": "andrew@texasturfmaintenance.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Dallas",
+          "sameAs": "https://en.wikipedia.org/wiki/Dallas"
+        },
+        {
+          "@type": "City", 
+          "name": "Fort Worth",
+          "sameAs": "https://en.wikipedia.org/wiki/Fort_Worth,_Texas"
+        }
+      ],
+      "serviceType": [
+        "Artificial Turf Maintenance",
+        "Synthetic Turf Cleaning", 
+        "Sports Field Maintenance",
+        "Turf Sanitization",
+        "Field Repair Services"
+      ]
+    }
+    </script>
+    
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -23,6 +95,9 @@ const { title, description = "Professional artificial turf sports field maintena
 </html>
 
 <style is:global>
+  /* Import Google Fonts for better typography */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
   * {
     margin: 0;
     padding: 0;
@@ -30,47 +105,179 @@ const { title, description = "Professional artificial turf sports field maintena
   }
 
   html {
-    font-family: system-ui, sans-serif;
-    line-height: 1.6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    color: #333;
-    background-color: #fff;
+    color: #1f2937;
+    background-color: #ffffff;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  /* Improved typography scale */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #111827;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.875rem);
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    color: #4b5563;
+    font-size: 1.1rem;
+    line-height: 1.8;
   }
 
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 
+  /* Enhanced button styles */
   .btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #22c55e;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
     color: white;
     text-decoration: none;
-    border-radius: 0.375rem;
+    border-radius: 0.5rem;
     font-weight: 600;
-    transition: background-color 0.2s;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 14px 0 rgba(34, 197, 94, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
   }
 
   .btn:hover {
-    background-color: #16a34a;
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    box-shadow: 0 8px 25px 0 rgba(34, 197, 94, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 14px 0 rgba(34, 197, 94, 0.2);
   }
 
   .btn-secondary {
-    background-color: #3b82f6;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.2);
   }
 
   .btn-secondary:hover {
-    background-color: #2563eb;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    box-shadow: 0 8px 25px 0 rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
   }
 
+  /* Improved form styles */
+  input, select, textarea {
+    font-family: inherit;
+  }
+
+  /* Enhanced focus states */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid #22c55e;
+    outline-offset: 2px;
+  }
+
+  /* Smooth scrolling links */
+  a {
+    color: #22c55e;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #16a34a;
+  }
+
+  /* Loading animation for better UX */
+  .loading {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  /* Improved list styles */
+  ul, ol {
+    margin-bottom: 1rem;
+  }
+
+  /* Better spacing utilities */
+  .section-padding {
+    padding: 5rem 0;
+  }
+
+  .section-padding-sm {
+    padding: 3rem 0;
+  }
+
+  /* Responsive text sizes */
   @media (max-width: 768px) {
     .container {
-      padding: 0 0.5rem;
+      padding: 0 1rem;
+    }
+
+    body {
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 0.875rem;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    .btn, .mobile-menu-toggle {
+      display: none !important;
     }
   }
 </style>
