@@ -53,7 +53,6 @@ const currentUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
       "@type": "LocalBusiness",
       "@id": "https://texasturfmaintenance.com/#business",
       "name": "Texas Turf Maintenance",
-      "alternateName": "TurfPro DFW",
       "description": "Professional artificial turf maintenance services in Dallas Fort-Worth",
       "url": "https://texasturfmaintenance.com",
       "telephone": "",
@@ -540,6 +539,67 @@ const currentUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
     pointer-events: none;
     cursor: not-allowed;
   }
+
+  /* Flat Icon System */
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    background: var(--color-primary-500);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    box-shadow: var(--shadow-md);
+  }
+
+  .icon-large {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+  }
+
+  .icon-small {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .icon-secondary {
+    background: var(--color-neutral-100);
+    color: var(--color-primary-600);
+  }
+
+  .icon-white {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(10px);
+  }
+
+  /* Specific icons using CSS pseudo-elements */
+  .icon-leaf::before { content: "🌿"; }
+  .icon-cleaning::before { content: "✨"; }
+  .icon-sanitize::before { content: "💧"; }
+  .icon-balance::before { content: "⚖"; }
+  .icon-tools::before { content: "🔧"; }
+  .icon-target::before { content: "🎯"; }
+  .icon-check::before { content: "✓"; }
+  .icon-stadium::before { content: "🏟"; }
+  .icon-shield::before { content: "🛡"; }
+  .icon-chart::before { content: "📊"; }
+  .icon-cycle::before { content: "🔄"; }
+  .icon-virus::before { content: "🦠"; }
+  .icon-email::before { content: "✉"; }
+  .icon-location::before { content: "📍"; }
+  .icon-time::before { content: "⏱"; }
+  .icon-growth::before { content: "📈"; }
+  .icon-clipboard::before { content: "📋"; }
+  .icon-microscope::before { content: "🔬"; }
+  .icon-football::before { content: "🏈"; }
+  .icon-lightning::before { content: "⚡"; }
 
   /* Animations */
   .fade-in {

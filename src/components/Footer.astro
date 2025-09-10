@@ -6,7 +6,7 @@
     <div class="footer-content">
       <div class="footer-section footer-brand">
         <div class="footer-logo">
-          <div class="footer-logo-icon">🌱</div>
+          <div class="footer-logo-icon icon icon-leaf"></div>
           <div>
             <h3>Texas Turf Maintenance</h3>
             <p class="footer-tagline">Artificial Sports Field Experts</p>
@@ -22,18 +22,17 @@
           <li><a href="/services#sanitization">Sanitization</a></li>
           <li><a href="/services#infill">Infill Management</a></li>
           <li><a href="/services#repairs">Repairs & Maintenance</a></li>
-          <li><a href="/services#emergency">Emergency Service</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
         <h4>Service Areas</h4>
         <ul>
-          <li>Dallas & Metroplex</li>
-          <li>Houston & Surrounding</li>
-          <li>Austin & Central Texas</li>
-          <li>San Antonio Region</li>
-          <li>Fort Worth Area</li>
+          <li><a href="/dallas">Dallas & Metroplex</a></li>
+          <li><a href="/houston">Houston & Surrounding</a></li>
+          <li><a href="/austin">Austin & Central Texas</a></li>
+          <li><a href="/san-antonio">San Antonio Region</a></li>
+          <li><a href="/locations">All Texas Locations</a></li>
         </ul>
       </div>
       
@@ -43,7 +42,7 @@
           <p><strong>Email:</strong></p>
           <p><a href="mailto:andrew@texasturfmaintenance.com">andrew@texasturfmaintenance.com</a></p>
           <p class="mt-md"><strong>Service Hours:</strong></p>
-          <p class="text-small">Monday - Friday: 7AM - 7PM<br>Saturday: 8AM - 5PM<br>Sunday: Emergency Only</p>
+          <p class="text-small">Monday - Friday: 7AM - 7PM<br>Saturday: 8AM - 5PM<br>Sunday: Closed</p>
         </div>
       </div>
     </div>
@@ -86,16 +85,7 @@
   }
 
   .footer-logo-icon {
-    font-size: 2rem;
-    background: var(--color-primary-500);
-    color: white;
-    width: 48px;
-    height: 48px;
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-md);
+    /* Icon styling handled by global .icon class */
   }
 
   .footer-section h3 {

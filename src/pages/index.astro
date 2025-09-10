@@ -18,7 +18,7 @@ import Footer from '../components/Footer.astro';
       <div class="hero-bg"></div>
       <div class="container">
         <div class="hero-content">
-          <div class="hero-badge">🏟️ Professional Sports Field Maintenance</div>
+          <div class="hero-badge"><span class="icon icon-stadium icon-small icon-white"></span> Professional Sports Field Maintenance</div>
           <h1>Texas Artificial Turf Maintenance</h1>
           <p class="hero-subtitle text-large">Expert synthetic turf cleaning, sanitization, and repair services for sports fields throughout Texas</p>
           <div class="hero-buttons flex-center">
@@ -27,16 +27,16 @@ import Footer from '../components/Footer.astro';
           </div>
           <div class="hero-stats grid grid-3">
             <div class="stat-item">
-              <div class="stat-number">500+</div>
-              <div class="stat-label">Fields Maintained</div>
+              <div class="stat-number">Texas</div>
+              <div class="stat-label">Statewide Service</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Years Experience</div>
+              <div class="stat-number">Pro</div>
+              <div class="stat-label">Equipment & Methods</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">24/7</div>
-              <div class="stat-label">Emergency Service</div>
+              <div class="stat-number">Expert</div>
+              <div class="stat-label">Professional Service</div>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ import Footer from '../components/Footer.astro';
         </div>
         <div class="services-grid grid grid-auto">
           <div class="service-card bg-white shadow-lg rounded-lg">
-            <div class="service-icon">🧹</div>
+            <div class="service-icon icon icon-cleaning icon-large icon-secondary"></div>
             <h3 class="text-primary">Deep Cleaning</h3>
             <p>Advanced cleaning systems remove embedded dirt, debris, and organic matter to restore your field's appearance and performance.</p>
             <div class="service-features">
@@ -61,7 +61,7 @@ import Footer from '../components/Footer.astro';
             </div>
           </div>
           <div class="service-card bg-white shadow-lg rounded-lg">
-            <div class="service-icon">🦠</div>
+            <div class="service-icon icon icon-sanitize icon-large icon-secondary"></div>
             <h3 class="text-primary">Sanitization</h3>
             <p>EPA-approved disinfectants eliminate bacteria, viruses, and odors creating a safer environment for athletes.</p>
             <div class="service-features">
@@ -70,7 +70,7 @@ import Footer from '../components/Footer.astro';
             </div>
           </div>
           <div class="service-card bg-white shadow-lg rounded-lg">
-            <div class="service-icon">⚖️</div>
+            <div class="service-icon icon icon-balance icon-large icon-secondary"></div>
             <h3 class="text-primary">Infill Management</h3>
             <p>Professional redistribution and leveling of rubber granules ensures consistent playing surface and optimal safety.</p>
             <div class="service-features">
@@ -79,7 +79,7 @@ import Footer from '../components/Footer.astro';
             </div>
           </div>
           <div class="service-card bg-white shadow-lg rounded-lg">
-            <div class="service-icon">🔧</div>
+            <div class="service-icon icon icon-tools icon-large icon-secondary"></div>
             <h3 class="text-primary">Repairs & Maintenance</h3>
             <p>Expert seam repairs, patch installation, and preventive maintenance programs to maximize your turf's lifespan.</p>
             <div class="service-features">
@@ -100,17 +100,17 @@ import Footer from '../components/Footer.astro';
         </div>
         <div class="features-grid grid grid-3">
           <div class="feature text-center">
-            <div class="feature-icon">🎯</div>
+            <div class="feature-icon icon icon-target icon-large icon-secondary"></div>
             <h3>Texas Specialists</h3>
             <p class="text-secondary">Deep understanding of Texas climate challenges and local sports field requirements.</p>
           </div>
           <div class="feature text-center">
-            <div class="feature-icon">🔧</div>
+            <div class="feature-icon icon icon-tools icon-large icon-secondary"></div>
             <h3>Professional Equipment</h3>
             <p class="text-secondary">State-of-the-art cleaning and maintenance equipment designed for artificial turf care.</p>
           </div>
           <div class="feature text-center">
-            <div class="feature-icon">✅</div>
+            <div class="feature-icon icon icon-check icon-large icon-secondary"></div>
             <h3>Certified Technicians</h3>
             <p class="text-secondary">Trained professionals with industry certifications and extensive synthetic turf experience.</p>
           </div>
@@ -266,9 +266,8 @@ import Footer from '../components/Footer.astro';
   }
 
   .service-icon {
-    font-size: 3rem;
     margin-bottom: var(--space-lg);
-    display: block;
+    margin: 0 auto var(--space-lg) auto;
   }
 
   .service-card h3 {
@@ -300,9 +299,8 @@ import Footer from '../components/Footer.astro';
 
   /* Features */
   .feature-icon {
-    font-size: 3rem;
     margin-bottom: var(--space-lg);
-    display: block;
+    margin: 0 auto var(--space-lg) auto;
   }
 
   .feature h3 {
@@ -350,7 +348,7 @@ import Footer from '../components/Footer.astro';
 
     .service-icon,
     .feature-icon {
-      font-size: 2.5rem;
+      /* Icon sizing handled by icon classes */
     }
 
     .hero-buttons,
