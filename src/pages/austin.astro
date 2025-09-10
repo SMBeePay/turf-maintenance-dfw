@@ -167,11 +167,21 @@ import Footer from '../components/Footer.astro';
     <section class="service-areas section bg-neutral-light">
       <div class="container">
         <h2 class="text-center mb-2xl">Central Texas Service Coverage</h2>
+        <div class="city-pages-section mb-2xl">
+          <h3 class="text-center mb-xl">Featured Austin Metro Cities</h3>
+          <div class="featured-cities grid grid-1" style="max-width: 400px; margin: 0 auto;">
+            <div class="city-card bg-white rounded-lg shadow">
+              <h4><a href="/round-rock">Round Rock</a></h4>
+              <p>Growing sports community with expanding athletic programs</p>
+            </div>
+          </div>
+        </div>
+        
         <div class="areas-grid grid grid-4">
           <div class="area-column">
             <h4>North Austin</h4>
             <ul>
-              <li>Round Rock</li>
+              <li><a href="/round-rock">Round Rock</a></li>
               <li>Cedar Park</li>
               <li>Leander</li>
               <li>Georgetown</li>
@@ -379,6 +389,57 @@ import Footer from '../components/Footer.astro';
   .area-column li {
     padding: var(--space-xs) 0;
     color: var(--color-neutral-600);
+  }
+
+  /* Featured Cities */
+  .city-pages-section h3 {
+    color: var(--color-neutral-900);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .city-card {
+    padding: var(--space-lg);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .city-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .city-card h4 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .city-card h4 a {
+    color: var(--color-primary-600);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .city-card h4 a:hover {
+    color: var(--color-primary-700);
+    text-decoration: underline;
+  }
+
+  .city-card p {
+    color: var(--color-neutral-600);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .area-column li a {
+    color: var(--color-primary-600);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .area-column li a:hover {
+    color: var(--color-primary-700);
+    text-decoration: underline;
   }
 
   .climate-list {

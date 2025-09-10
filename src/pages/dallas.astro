@@ -165,14 +165,37 @@ import Footer from '../components/Footer.astro';
     <!-- Service Areas -->
     <section class="service-areas section bg-neutral-light">
       <div class="container">
-        <h2 class="text-center mb-2xl">Dallas Service Coverage</h2>
+        <h2 class="text-center mb-2xl">Dallas Metro Service Coverage</h2>
+        <div class="city-pages-section mb-2xl">
+          <h3 class="text-center mb-xl">Featured Dallas Metro Cities</h3>
+          <div class="featured-cities grid grid-4">
+            <div class="city-card bg-white rounded-lg shadow">
+              <h4><a href="/plano">Plano</a></h4>
+              <p>Championship-level athletic programs and premier facilities</p>
+            </div>
+            <div class="city-card bg-white rounded-lg shadow">
+              <h4><a href="/frisco">Frisco</a></h4>
+              <p>Sports City USA with professional venues and complexes</p>
+            </div>
+            <div class="city-card bg-white rounded-lg shadow">
+              <h4><a href="/irving">Irving</a></h4>
+              <p>Central DFW location with diverse corporate facilities</p>
+            </div>
+            <div class="city-card bg-white rounded-lg shadow">
+              <h4><a href="/arlington">Arlington</a></h4>
+              <p>Major league sports city with professional standards</p>
+            </div>
+          </div>
+        </div>
+        
         <div class="areas-grid grid grid-4">
           <div class="area-column">
             <h4>North Dallas</h4>
             <ul>
+              <li><a href="/plano">Plano</a></li>
+              <li><a href="/frisco">Frisco</a></li>
               <li>Addison</li>
               <li>Carrollton</li>
-              <li>Farmers Branch</li>
               <li>Richardson</li>
             </ul>
           </div>
@@ -183,6 +206,7 @@ import Footer from '../components/Footer.astro';
               <li>Mesquite</li>
               <li>Sunnyvale</li>
               <li>Balch Springs</li>
+              <li>Rowlett</li>
             </ul>
           </div>
           <div class="area-column">
@@ -192,12 +216,14 @@ import Footer from '../components/Footer.astro';
               <li>Lancaster</li>
               <li>Cedar Hill</li>
               <li>Duncanville</li>
+              <li>Grand Prairie</li>
             </ul>
           </div>
           <div class="area-column">
             <h4>West Dallas</h4>
             <ul>
-              <li>Irving</li>
+              <li><a href="/irving">Irving</a></li>
+              <li><a href="/arlington">Arlington</a></li>
               <li>Coppell</li>
               <li>University Park</li>
               <li>Highland Park</li>
@@ -383,6 +409,57 @@ import Footer from '../components/Footer.astro';
   .area-column li {
     padding: var(--space-xs) 0;
     color: var(--color-neutral-600);
+  }
+
+  /* Featured Cities */
+  .city-pages-section h3 {
+    color: var(--color-neutral-900);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .city-card {
+    padding: var(--space-lg);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .city-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .city-card h4 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .city-card h4 a {
+    color: var(--color-primary-600);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .city-card h4 a:hover {
+    color: var(--color-primary-700);
+    text-decoration: underline;
+  }
+
+  .city-card p {
+    color: var(--color-neutral-600);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .area-column li a {
+    color: var(--color-primary-600);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .area-column li a:hover {
+    color: var(--color-primary-700);
+    text-decoration: underline;
   }
 
   /* Climate list */
