@@ -118,6 +118,62 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
+    <!-- Resources Section -->
+    <section class="resources section bg-neutral-light">
+      <div class="container">
+        <div class="section-header text-center mb-2xl">
+          <h2>Resources for Athletic Directors</h2>
+          <p class="text-large text-secondary">Essential tools and guides for managing artificial turf facilities</p>
+        </div>
+        
+        <div class="resources-grid grid grid-auto">
+          <div class="resource-card bg-white shadow-lg rounded-lg">
+            <div class="resource-icon icon icon-document icon-large icon-secondary"></div>
+            <h3>Field Maintenance Checklist</h3>
+            <p>Comprehensive checklist for routine artificial turf maintenance and inspection schedules.</p>
+            <div class="resource-meta">
+              <span class="file-type">PDF</span>
+              <span class="file-size">2.1 MB</span>
+            </div>
+            <a href="/resources/maintenance-checklist" class="btn btn-outline btn-small">Download Guide</a>
+          </div>
+          
+          <div class="resource-card bg-white shadow-lg rounded-lg">
+            <div class="resource-icon icon icon-shield icon-large icon-secondary"></div>
+            <h3>Safety Standards Guide</h3>
+            <p>Complete guide to artificial turf safety standards, testing requirements, and compliance protocols.</p>
+            <div class="resource-meta">
+              <span class="file-type">PDF</span>
+              <span class="file-size">3.4 MB</span>
+            </div>
+            <a href="/resources/safety-standards" class="btn btn-outline btn-small">Download Guide</a>
+          </div>
+          
+          <div class="resource-card bg-white shadow-lg rounded-lg">
+            <div class="resource-icon icon icon-budget icon-large icon-secondary"></div>
+            <h3>Budget Planning Template</h3>
+            <p>Detailed template for planning annual artificial turf maintenance budgets and cost forecasting.</p>
+            <div class="resource-meta">
+              <span class="file-type">Excel</span>
+              <span class="file-size">850 KB</span>
+            </div>
+            <a href="/resources/budget-template" class="btn btn-outline btn-small">Download Template</a>
+          </div>
+          
+          <div class="resource-card bg-white shadow-lg rounded-lg highlight-card">
+            <div class="resource-icon icon icon-calculator icon-large icon-primary"></div>
+            <h3>ROI Calculator</h3>
+            <p>Interactive calculator to determine the return on investment for professional turf maintenance.</p>
+            <div class="resource-meta">
+              <span class="file-type">Interactive</span>
+              <span class="access-type">Free Tool</span>
+            </div>
+            <a href="/roi-calculator" class="btn btn-primary btn-small">Launch Calculator</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta bg-primary text-white">
       <div class="container text-center">
@@ -305,6 +361,96 @@ import Footer from '../components/Footer.astro';
 
   .feature h3 {
     margin-bottom: var(--space-md);
+  }
+
+  /* Resources Section */
+  .resource-card {
+    padding: var(--space-2xl);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-neutral-200);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .resource-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--color-primary-500);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary-200);
+  }
+
+  .resource-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .highlight-card {
+    border-color: var(--color-primary-300);
+    background: linear-gradient(135deg, white 0%, var(--color-primary-50) 100%);
+  }
+
+  .highlight-card::before {
+    transform: scaleX(1);
+    background: var(--color-primary-600);
+  }
+
+  .resource-icon {
+    margin: 0 auto var(--space-lg) auto;
+  }
+
+  .resource-card h3 {
+    color: var(--color-primary-600);
+    margin-bottom: var(--space-md);
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .resource-card p {
+    color: var(--color-neutral-600);
+    margin-bottom: var(--space-lg);
+    line-height: 1.5;
+  }
+
+  .resource-meta {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .file-type, .file-size, .access-type {
+    font-size: 0.75rem;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+  }
+
+  .file-type {
+    background: var(--color-primary-100);
+    color: var(--color-primary-700);
+  }
+
+  .file-size {
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-600);
+  }
+
+  .access-type {
+    background: var(--color-success-100);
+    color: var(--color-success-700);
   }
 
   /* CTA Section */

@@ -1,0 +1,693 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="ROI Calculator for Artificial Turf Maintenance | Texas Turf Maintenance"
+  description="Calculate your return on investment for professional artificial turf maintenance services. Compare costs and benefits with our interactive ROI calculator."
+  keywords="artificial turf ROI calculator, turf maintenance ROI, sports field maintenance cost calculator, artificial turf cost savings calculator"
+  canonical="/roi-calculator"
+>
+  <Header />
+  
+  <main>
+    <!-- Page Header -->
+    <section class="page-header bg-primary text-white">
+      <div class="container text-center">
+        <div class="hero-badge"><span class="icon icon-calculator icon-small icon-white"></span> Interactive Tool</div>
+        <h1 class="text-white">Artificial Turf Maintenance ROI Calculator</h1>
+        <p class="text-large" style="color: rgba(255, 255, 255, 0.95);">Calculate the return on investment for professional turf maintenance services</p>
+      </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator section">
+      <div class="container">
+        <div class="calculator-layout grid grid-2">
+          <!-- Calculator Form -->
+          <div class="calculator-form bg-white shadow-lg rounded-lg">
+            <h2>Calculate Your ROI</h2>
+            <p class="text-secondary mb-xl">Enter your facility details to see potential cost savings and benefits</p>
+            
+            <form id="roi-calculator-form">
+              <div class="form-group">
+                <label for="fieldSize">Field Size (sq ft)</label>
+                <input type="number" id="fieldSize" name="fieldSize" value="57600" min="1000" max="200000" required>
+                <small class="form-help">Standard football field is approximately 57,600 sq ft</small>
+              </div>
+
+              <div class="form-group">
+                <label for="fieldAge">Field Age (years)</label>
+                <input type="number" id="fieldAge" name="fieldAge" value="5" min="1" max="20" required>
+              </div>
+
+              <div class="form-group">
+                <label for="usageHours">Weekly Usage Hours</label>
+                <input type="number" id="usageHours" name="usageHours" value="40" min="5" max="100" required>
+                <small class="form-help">Include practices, games, and other activities</small>
+              </div>
+
+              <div class="form-group">
+                <label for="currentMaintenance">Current Annual Maintenance Cost</label>
+                <input type="number" id="currentMaintenance" name="currentMaintenance" value="5000" min="0" max="50000" required>
+                <small class="form-help">Include all current turf maintenance expenses</small>
+              </div>
+
+              <div class="form-group">
+                <label for="fieldType">Field Type</label>
+                <select id="fieldType" name="fieldType" required>
+                  <option value="football">Football</option>
+                  <option value="soccer">Soccer</option>
+                  <option value="baseball">Baseball</option>
+                  <option value="multi-sport">Multi-Sport</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="location">Location</label>
+                <select id="location" name="location" required>
+                  <option value="dallas">Dallas Metro</option>
+                  <option value="houston">Houston Metro</option>
+                  <option value="austin">Austin Metro</option>
+                  <option value="san-antonio">San Antonio Metro</option>
+                  <option value="other">Other Texas Location</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Calculate ROI</button>
+            </form>
+          </div>
+
+          <!-- Results Display -->
+          <div class="calculator-results">
+            <div id="initial-state" class="results-placeholder">
+              <div class="placeholder-icon icon icon-calculator icon-large icon-secondary"></div>
+              <h3>Professional ROI Analysis</h3>
+              <p class="text-secondary">Fill out the form to see your personalized return on investment analysis for professional artificial turf maintenance.</p>
+              
+              <div class="benefits-preview">
+                <h4>What You'll Discover:</h4>
+                <ul class="benefits-list">
+                  <li><span class="icon icon-check icon-small"></span> Annual cost savings potential</li>
+                  <li><span class="icon icon-check icon-small"></span> Extended field lifespan value</li>
+                  <li><span class="icon icon-check icon-small"></span> Reduced injury risk benefits</li>
+                  <li><span class="icon icon-check icon-small"></span> Performance improvement impact</li>
+                  <li><span class="icon icon-check icon-small"></span> Detailed 5-year projection</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="results-display" class="results-content" style="display: none;">
+              <!-- Results will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Modal (Hidden) -->
+    <div id="contact-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Get Your Detailed ROI Report</h3>
+          <button class="modal-close" id="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>To receive your complete ROI analysis and customized maintenance recommendations, please provide your contact information:</p>
+          
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+              <label for="organization">School/Organization *</label>
+              <input type="text" id="organization" name="organization" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="title">Job Title</label>
+              <input type="text" id="title" name="title" placeholder="Athletic Director, Facilities Manager, etc.">
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Get Detailed ROI Report</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features section bg-neutral-light">
+      <div class="container">
+        <div class="section-header text-center mb-2xl">
+          <h2>Why Use Professional Maintenance?</h2>
+          <p class="text-large text-secondary">Discover the hidden costs of poor maintenance and benefits of professional care</p>
+        </div>
+        
+        <div class="features-grid grid grid-3">
+          <div class="feature-card bg-white shadow-lg rounded-lg">
+            <div class="feature-icon icon icon-money icon-large icon-success"></div>
+            <h3>Cost Savings</h3>
+            <p>Professional maintenance can extend field life by 30-50%, saving thousands in replacement costs.</p>
+          </div>
+          
+          <div class="feature-card bg-white shadow-lg rounded-lg">
+            <div class="feature-icon icon icon-shield icon-large icon-primary"></div>
+            <h3>Safety Improvement</h3>
+            <p>Proper maintenance reduces injury risk by maintaining optimal surface conditions and infill levels.</p>
+          </div>
+          
+          <div class="feature-card bg-white shadow-lg rounded-lg">
+            <div class="feature-icon icon icon-target icon-large icon-secondary"></div>
+            <h3>Performance Enhancement</h3>
+            <p>Well-maintained fields provide consistent playing conditions that enhance athletic performance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    padding: var(--space-4xl) 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.95);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    margin-bottom: var(--space-lg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .calculator-layout {
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  .calculator-form {
+    padding: var(--space-3xl);
+  }
+
+  .calculator-form h2 {
+    color: var(--color-primary-600);
+    margin-bottom: var(--space-md);
+  }
+
+  .form-group {
+    margin-bottom: var(--space-lg);
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-neutral-700);
+    margin-bottom: var(--space-sm);
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: var(--space-md);
+    border: 2px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--color-primary-500);
+  }
+
+  .form-help {
+    font-size: 0.875rem;
+    color: var(--color-neutral-500);
+    margin-top: var(--space-xs);
+    display: block;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  .results-placeholder {
+    text-align: center;
+    padding: var(--space-3xl);
+  }
+
+  .placeholder-icon {
+    margin: 0 auto var(--space-lg) auto;
+    opacity: 0.6;
+  }
+
+  .results-placeholder h3 {
+    color: var(--color-neutral-700);
+    margin-bottom: var(--space-md);
+  }
+
+  .benefits-preview {
+    margin-top: var(--space-2xl);
+    text-align: left;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .benefits-preview h4 {
+    color: var(--color-primary-600);
+    margin-bottom: var(--space-md);
+    text-align: center;
+  }
+
+  .benefits-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+    color: var(--color-neutral-600);
+  }
+
+  .results-content {
+    padding: var(--space-2xl);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .feature-card {
+    padding: var(--space-2xl);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .feature-icon {
+    margin: 0 auto var(--space-lg) auto;
+  }
+
+  .feature-card h3 {
+    color: var(--color-primary-600);
+    margin-bottom: var(--space-md);
+  }
+
+  .feature-card p {
+    color: var(--color-neutral-600);
+    line-height: 1.6;
+  }
+
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg);
+  }
+
+  .modal-content {
+    background: white;
+    border-radius: var(--radius-lg);
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-xl);
+    border-bottom: 1px solid var(--color-neutral-200);
+  }
+
+  .modal-header h3 {
+    color: var(--color-primary-600);
+    margin: 0;
+  }
+
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-neutral-500);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    transition: background-color 0.2s ease;
+  }
+
+  .modal-close:hover {
+    background: var(--color-neutral-100);
+  }
+
+  .modal-body {
+    padding: var(--space-xl);
+  }
+
+  @media (max-width: 768px) {
+    .calculator-layout {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .calculator-form {
+      padding: var(--space-xl);
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .calculator-form {
+      padding: var(--space-lg);
+    }
+
+    .results-placeholder {
+      padding: var(--space-xl);
+    }
+
+    .modal-content {
+      margin: var(--space-md);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('roi-calculator-form');
+    const initialState = document.getElementById('initial-state');
+    const resultsDisplay = document.getElementById('results-display');
+    const modal = document.getElementById('contact-modal');
+    const modalClose = document.getElementById('modal-close');
+    const contactForm = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      calculateROI();
+    });
+
+    modalClose.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitContactForm();
+    });
+
+    function calculateROI() {
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      
+      // Calculate ROI metrics
+      const fieldSize = parseInt(data.fieldSize);
+      const fieldAge = parseInt(data.fieldAge);
+      const usageHours = parseInt(data.usageHours);
+      const currentMaintenance = parseInt(data.currentMaintenance);
+      
+      // Professional maintenance cost estimate (adjust based on field size and usage)
+      const baseRate = 0.12; // per sq ft per year
+      const usageMultiplier = Math.max(0.8, Math.min(1.5, usageHours / 40));
+      const professionalCost = Math.round(fieldSize * baseRate * usageMultiplier);
+      
+      // Calculate benefits
+      const maintenanceSavings = Math.max(0, currentMaintenance - professionalCost);
+      const fieldLifeExtension = Math.round(fieldAge * 0.4); // 40% life extension
+      const replacementCost = fieldSize * 8; // $8 per sq ft for replacement
+      const lifetimeValue = (replacementCost * fieldLifeExtension) / 15; // Annual value
+      
+      const totalAnnualBenefit = maintenanceSavings + lifetimeValue;
+      const roi = ((totalAnnualBenefit - Math.max(0, professionalCost - currentMaintenance)) / Math.max(1, professionalCost - currentMaintenance)) * 100;
+      
+      displayResults({
+        professionalCost,
+        maintenanceSavings,
+        lifetimeValue,
+        totalAnnualBenefit,
+        roi: Math.round(roi),
+        fieldLifeExtension
+      });
+    }
+
+    function displayResults(results) {
+      initialState.style.display = 'none';
+      resultsDisplay.style.display = 'block';
+      
+      resultsDisplay.innerHTML = `
+        <h3>Your ROI Analysis</h3>
+        <div class="roi-summary">
+          <div class="roi-metric">
+            <div class="metric-value">${results.roi}%</div>
+            <div class="metric-label">Annual ROI</div>
+          </div>
+          <div class="roi-metric">
+            <div class="metric-value">$${results.totalAnnualBenefit.toLocaleString()}</div>
+            <div class="metric-label">Annual Benefit</div>
+          </div>
+        </div>
+        
+        <div class="roi-breakdown">
+          <h4>Cost Breakdown</h4>
+          <div class="breakdown-item">
+            <span>Professional Maintenance Cost</span>
+            <span>$${results.professionalCost.toLocaleString()}/year</span>
+          </div>
+          <div class="breakdown-item">
+            <span>Field Life Extension Value</span>
+            <span>$${results.lifetimeValue.toLocaleString()}/year</span>
+          </div>
+          <div class="breakdown-item">
+            <span>Maintenance Cost Savings</span>
+            <span>$${results.maintenanceSavings.toLocaleString()}/year</span>
+          </div>
+          <div class="breakdown-item total">
+            <span>Total Annual Benefit</span>
+            <span>$${results.totalAnnualBenefit.toLocaleString()}</span>
+          </div>
+        </div>
+        
+        <button class="btn btn-primary btn-large get-report-btn" style="width: 100%; margin-top: var(--space-lg);">
+          Get Detailed Report
+        </button>
+      `;
+
+      // Add event listener to the get report button
+      const getReportBtn = resultsDisplay.querySelector('.get-report-btn');
+      getReportBtn.addEventListener('click', function() {
+        modal.style.display = 'flex';
+      });
+
+      // Add styles for the results
+      if (!document.getElementById('roi-results-styles')) {
+        const style = document.createElement('style');
+        style.id = 'roi-results-styles';
+        style.textContent = `
+          .roi-summary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+          }
+          
+          .roi-metric {
+            text-align: center;
+            padding: var(--space-lg);
+            background: var(--color-primary-50);
+            border-radius: var(--radius-md);
+          }
+          
+          .metric-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-primary-600);
+            margin-bottom: var(--space-sm);
+          }
+          
+          .metric-label {
+            font-size: 0.875rem;
+            color: var(--color-neutral-600);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+          }
+          
+          .roi-breakdown h4 {
+            color: var(--color-primary-600);
+            margin-bottom: var(--space-lg);
+          }
+          
+          .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid var(--color-neutral-200);
+          }
+          
+          .breakdown-item.total {
+            font-weight: 700;
+            border-bottom: 2px solid var(--color-primary-500);
+            color: var(--color-primary-700);
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    }
+
+    function submitContactForm() {
+      // Here you would typically send the form data to your server
+      // For now, we'll just show a success message
+      
+      modal.style.display = 'none';
+      
+      // Replace results with success message
+      resultsDisplay.innerHTML = `
+        <div class="success-message">
+          <div class="success-icon icon icon-check icon-large icon-success"></div>
+          <h3>Thank You!</h3>
+          <p>Your detailed ROI report has been sent to your email address. Our team will also follow up with you within 24 hours to discuss your specific maintenance needs.</p>
+          <div class="next-steps">
+            <h4>What's Next?</h4>
+            <ul>
+              <li>Check your email for the detailed ROI report</li>
+              <li>Review our maintenance service options</li>
+              <li>Schedule a free field assessment</li>
+            </ul>
+          </div>
+          <a href="/contact" class="btn btn-primary btn-large">Schedule Assessment</a>
+        </div>
+      `;
+
+      // Add success message styles
+      if (!document.getElementById('success-styles')) {
+        const style = document.createElement('style');
+        style.id = 'success-styles';
+        style.textContent = `
+          .success-message {
+            text-align: center;
+            padding: var(--space-2xl);
+          }
+          
+          .success-icon {
+            margin: 0 auto var(--space-lg) auto;
+          }
+          
+          .success-message h3 {
+            color: var(--color-success-600);
+            margin-bottom: var(--space-md);
+          }
+          
+          .next-steps {
+            margin: var(--space-xl) 0;
+            text-align: left;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          .next-steps h4 {
+            color: var(--color-primary-600);
+            margin-bottom: var(--space-md);
+            text-align: center;
+          }
+          
+          .next-steps ul {
+            list-style: none;
+            padding: 0;
+          }
+          
+          .next-steps li {
+            padding: var(--space-sm) 0;
+            color: var(--color-neutral-600);
+            position: relative;
+            padding-left: var(--space-lg);
+          }
+          
+          .next-steps li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary-500);
+            font-weight: bold;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    }
+  });
+</script>

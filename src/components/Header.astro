@@ -16,7 +16,16 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="/" aria-current="page">Home</a></li>
         <li><a href="/services">Services</a></li>
-        <li><a href="/field-safety">Field Safety</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" aria-expanded="false">Field Types <span class="dropdown-arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/football-fields">Football Fields</a></li>
+            <li><a href="/soccer-fields">Soccer Fields</a></li>
+            <li><a href="/baseball-fields">Baseball Fields</a></li>
+            <li><a href="/multi-sport-fields">Multi-Sport Fields</a></li>
+            <li><a href="/field-safety">Safety Standards</a></li>
+          </ul>
+        </li>
         <li><a href="/locations">Service Areas</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact" class="nav-cta">Get Quote</a></li>
@@ -130,6 +139,76 @@
 
   .nav-links a[aria-current="page"] {
     color: var(--color-primary-600);
+  }
+
+  /* Dropdown Menu */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .dropdown-arrow {
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+  }
+
+  .dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--color-neutral-200);
+    padding: var(--space-md) 0;
+    margin-top: var(--space-sm);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .dropdown-menu li {
+    margin: 0;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: var(--space-md) var(--space-lg);
+    color: var(--color-neutral-700);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 0;
+  }
+
+  .dropdown-menu a::after {
+    display: none;
+  }
+
+  .dropdown-menu a:hover {
+    background: var(--color-primary-50);
+    color: var(--color-primary-700);
+    padding-left: var(--space-xl);
   }
 
   .nav-cta {
@@ -248,6 +327,43 @@
       border-bottom: 1px solid var(--color-neutral-100);
     }
 
+    /* Mobile dropdown adjustments */
+    .dropdown-menu {
+      position: static;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      background: var(--color-neutral-50);
+      border-radius: 0;
+      opacity: 1;
+      visibility: visible;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown.active .dropdown-menu {
+      max-height: 300px;
+    }
+
+    .dropdown-menu a {
+      padding: var(--space-md) var(--space-xl);
+      font-size: 0.95rem;
+      border-bottom: 1px solid var(--color-neutral-200);
+    }
+
+    .dropdown-menu a:hover {
+      padding-left: var(--space-xl);
+      background: var(--color-primary-100);
+    }
+
+    .dropdown-arrow {
+      font-size: 0.7rem;
+    }
+
     .nav-links li:last-child a {
       border-bottom: none;
     }
@@ -297,7 +413,7 @@
 
       // Close mobile menu when clicking on links
       navLinks.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A') {
+        if (e.target.tagName === 'A' && !e.target.classList.contains('dropdown-toggle')) {
           navLinks.classList.remove('active');
           toggleButton.setAttribute('aria-expanded', 'false');
         }
@@ -311,5 +427,39 @@
         }
       });
     }
+
+    // Dropdown functionality for mobile
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // On mobile, toggle the dropdown
+        if (window.innerWidth <= 768) {
+          const dropdown = this.closest('.dropdown');
+          dropdown.classList.toggle('active');
+          
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', (!isExpanded).toString());
+        }
+      });
+    });
+
+    // Close dropdown when clicking outside (desktop)
+    document.addEventListener('click', function(e) {
+      if (window.innerWidth > 768) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('active');
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            if (toggle) {
+              toggle.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+      }
+    });
   });
 </script>
